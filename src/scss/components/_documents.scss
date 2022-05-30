@@ -1,0 +1,57 @@
+.documents {
+    padding-bottom: 75px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__block {
+        
+        &:not(:last-child) {
+            margin-bottom: 37px;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 35px;
+            color: #263057;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__item {
+        padding-left: 20px;
+        margin-bottom: 24px;
+        
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            display: block;
+            color: rgba(0, 0, 0, 0.5);
+            padding-left: 50px;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #263057;
+        position: relative;
+        padding-left: 50px;
+        display: block;
+        margin-bottom: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 0;
+            background: url("../img/svg/doc.svg") center / contain no-repeat;
+            width: 30px;
+            height: 36px;
+        }
+    }
+}
+

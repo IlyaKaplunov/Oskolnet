@@ -1,0 +1,38 @@
+.gallery {
+    padding-bottom: 95px;
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @include notebook {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            @include mobile {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__photo {
+        img {
+            width: 100%;
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+}
+

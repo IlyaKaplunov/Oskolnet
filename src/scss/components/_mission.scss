@@ -1,0 +1,87 @@
+.mission {
+    padding-bottom: 105px;
+
+    @include mobile {
+        padding-bottom: 50px;
+    }
+    
+    &__title {
+        margin-bottom: 65px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        @include notebook {
+            flex-direction: column;
+
+        }
+
+        &:first-child {
+            @include notebook {
+                .mission__content {
+                    order: 2;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 140px;
+
+            @include notebook {
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    &__content {
+        @include notebook {
+            margin-top: 50px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 140%;
+        color: #263057;
+        max-width: 620px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &--sm {
+            max-width: 610px;
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        &--big {
+            max-width: 640px;
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+
+            @include mobile {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

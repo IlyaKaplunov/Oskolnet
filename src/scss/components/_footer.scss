@@ -1,0 +1,244 @@
+.footer {
+    background: linear-gradient(136.49deg, #263057 25.34%, #1D1444 89.06%);
+    padding: 101px 0 55px 0;
+
+    @include notebook {
+        padding: 20px 0 40px 0;
+    }
+    
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 89px;
+
+        @include notebook {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        
+    }
+
+    &__nav {
+        display: flex;
+
+        @include notebook {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        
+        &:not(:last-child) {
+            margin-right: 90px;
+
+            @include minidesk {
+                margin-right: 50px;
+            }
+
+            @include mobile {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 20px;
+        line-height: 39px;
+        color: #FFFFFF;
+    }
+
+    &__right {
+        @include notebook {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        margin-bottom: 24px;
+
+        &--desk {
+            @include notebook {
+                display: none;
+            }
+        }
+
+        &--mob {
+            display: none;
+            @include notebook {
+                display: flex;
+                flex-direction: column;
+                
+
+                
+            }
+
+            
+        }
+
+        @include notebook {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__btn {
+        padding: 13px 50px;
+
+        &:first-child {
+            margin-right: 20px;
+
+            @include notebook {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            
+        }
+
+        @include notebook {
+            text-align: center;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__contact {
+        @include flex-v-center;
+        margin-bottom: 14px;
+
+        @include mobile {
+            justify-content: center;
+            padding-top: 21px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: rgba(#fff, 0.5);
+            margin-left: 13px;
+        }
+    }
+
+    &__num {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+        background: url("../img/svg/phone-2.svg") left center no-repeat;
+        padding-left: 23px;
+        margin-left: 20px;
+
+        @include notebook {
+            margin-left: 0;
+        }
+    }
+
+    &__social {
+        @include flex-v-center;
+        margin-left: 19px;
+
+        @include notebook {
+            margin-left: 0;
+        }
+
+        @include mobile {
+            justify-content: center;
+            padding-bottom: 21px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        &-link {
+            &:not(:last-child) {
+                margin-right: 14px;
+            }
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: #fff;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        @include notebook {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            align-items: center;
+        }
+    }
+
+    &__copy {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: rgba(#fff, 0.5);
+
+        @include notebook {
+            order: 3;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: rgba(#fff, 0.5);
+        max-width: 670px;
+
+        @include notebook {
+            order: 2;
+            max-width: 100%;
+            margin-bottom: 16px;
+        }
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__switches {
+        display: flex;
+        align-items: center;
+
+        @include notebook {
+            order: 1;
+            margin-bottom: 15px;
+        }
+        
+        span {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(#fff, 0.5);
+        }
+
+    }
+
+    &__switch {
+        @include mobile {
+            display: none;
+        }
+        &--prev,
+        &--next {
+            svg {
+                width: 22px;
+                height: 14px;
+                fill: rgba(#fff, 0.5);
+            }
+        }
+    }
+}

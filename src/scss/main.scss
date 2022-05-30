@@ -1,0 +1,57 @@
+// Basic
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// Partials (Common)
+@import "./components/header";
+@import "./components/tabs";
+@import "./components/footer";
+@import "./components/breadcrumbs";
+@import "./components/popups";
+
+// Partials (Home page)
+@import "./components/home";
+@import "./components/tariffs";
+@import "./components/test-forms";
+@import "./components/about";
+@import "./components/news";
+@import "./components/docs";
+@import "./components/partners";
+
+// Partials (Home tariffs)
+@import "./components/home-tariffs";
+
+// Partials (Business tariffs)
+@import "./components/business-tariffs";
+
+// Partials (Documentation)
+@import "./components/documents";
+
+// Partials (Contacts)
+@import "./components/map";
+
+// Partials (Payment)
+@import "./components/accordion"; 
+
+// Partials (News page)
+@import "./components/news-list";
+
+// Partials (News article)
+@import "./components/news-article";
+
+// Partials (About - page)
+@import "./components/mission";
+@import "./components/dynamics";
+@import "./components/best";
+@import "./components/gallery";
+
+// Partials (Speed test)
+@import "./components/speed";
+
+// Partials (Error 404 - page)
+@import "./components/not-found";
+
+// Partials (Coverage map)
+@import "./components/addresses";
