@@ -1,6 +1,8 @@
 import Swiper, { Navigation, Pagination, FreeMode} from "swiper"; 
 Swiper.use([Navigation, Pagination, FreeMode]); 
 
+
+
 const partnersSlider = new Swiper(".partners__slider", { 
   speed: 600,
   slidesPerView: 1, 
@@ -100,6 +102,7 @@ const businessTariffsSlider = new Swiper(".business-tariffs__slider", {
   slidesPerGroup: 1,
   spaceBetween: 13,
   loop: true,
+  freeMode: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -121,7 +124,7 @@ const businessTariffsSlider = new Swiper(".business-tariffs__slider", {
   }
 });
 
-/* const mobSlider = document.querySelector('.news__inner');
+const mobSlider = document.querySelector('.news__inner');
 
 let myMobSwiper;
 
@@ -153,4 +156,4 @@ mobileSlider()
 
 window.addEventListener('resize', () => {
 	mobileSlider();
-}); */
+});

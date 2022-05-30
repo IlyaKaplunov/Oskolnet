@@ -1220,6 +1220,7 @@ body.lock {
   background: -o-linear-gradient(313.51deg, #263057 25.34%, #1D1444 89.06%);
   background: linear-gradient(136.49deg, #263057 25.34%, #1D1444 89.06%);
   padding: 43px 0;
+  margin-top: 146px;
 }
 .home__slider {
   background-color: #fff;
@@ -1782,22 +1783,21 @@ body.lock {
 }
 .news__inner {
   padding: 0 15px 41px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 19px;
+  gap: 19px; */
+  /* @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+  } */
 }
-@media (max-width: 768px) {
-  .news__inner {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
+.news__inner .swiper-wrapper {
+  -webkit-column-gap: 19px;
+  -moz-column-gap: 19px;
+  column-gap: 19px;
 }
 @media (max-width: 576px) {
   .news__inner {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
     padding-bottom: 49px;
   }
 }
@@ -1816,6 +1816,7 @@ body.lock {
   -ms-flex-align: start;
   align-items: flex-start;
   height: auto;
+  width: 33.3333%;
   max-width: 380px;
 }
 @media (max-width: 1024px) {
@@ -2027,8 +2028,11 @@ body.lock {
     padding: 20px;
   }
 }
+.home-tariffs__wrapper {
+  margin: 0 -15px;
+}
 .home-tariffs__slider {
-  padding-bottom: 55px;
+  padding: 0 15px 55px;
 }
 .home-tariffs__slider .swiper-pagination {
   bottom: 10px;
@@ -2052,6 +2056,17 @@ body.lock {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   padding: 23px 19px 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 @media (max-width: 768px) {
   .home-tariffs__item {
@@ -2133,6 +2148,7 @@ body.lock {
   font-size: 30px;
   position: relative;
   padding-top: 20px;
+  width: 100%;
 }
 .home-tariffs__price::after {
   content: "";
@@ -2186,8 +2202,11 @@ body.lock {
     padding: 20px;
   }
 }
+.business-tariffs__wrapper {
+  margin: 0 -15px;
+}
 .business-tariffs__slider {
-  padding-bottom: 55px;
+  padding: 0 15px 55px;
 }
 .business-tariffs__slider .swiper-pagination {
   bottom: 10px;
@@ -2219,6 +2238,9 @@ body.lock {
   -ms-flex-direction: column;
   flex-direction: column;
   height: auto;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 @media (max-width: 768px) {
   .business-tariffs__item {
@@ -2303,6 +2325,7 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 100%;
 }
 .business-tariffs__price::after {
   content: "";

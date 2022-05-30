@@ -2,14 +2,14 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
-
+/* import { mobileCheck } from "./functions/mobile-check";
+console.log(mobileCheck()) */
 import "./components/popups";
 import "./components/sliders";
 import "./components/tabs";
 import "./components/accordions";
 import "./components/burger";
+
 
 
 // Определение ширины экрана

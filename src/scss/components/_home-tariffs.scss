@@ -16,8 +16,12 @@
         }
     }
 
+    &__wrapper {
+        margin: 0 -15px;
+    }
+
     &__slider {
-       padding-bottom: 55px;
+       padding: 0 15px 55px;
 
         .swiper-pagination {
             bottom: 10px;
@@ -41,6 +45,10 @@
         border-radius: 30px;
         transition: all 0.2s ease-in-out;
         padding: 23px 19px 37px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
         
         @include tablet {
             border: 1px solid #142850;
@@ -124,6 +132,7 @@
         font-size: 30px;
         position: relative;
         padding-top: 20px;
+        width: 100%;
 
         &::after {
             content: "";
