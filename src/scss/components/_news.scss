@@ -10,26 +10,22 @@
         margin-bottom: 40px;
     }
 
-    &__wrapper {
-        margin: 0 -15px;
-    }
-
     &__inner {
-        padding: 0 15px 41px;
-        /* display: grid;
+        padding-bottom: 41px;
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 19px; */
+        gap: 19px;
 
         .swiper-wrapper {
             column-gap: 19px;
         }
 
-        /* @include tablet {
+        @include tablet {
             grid-template-columns: repeat(2, 1fr);
-        } */
+        }
 
         @include mobile {
-            /* grid-template-columns: repeat(1, 1fr); */
+            grid-template-columns: repeat(1, 1fr);
             padding-bottom: 49px;
         }
     }
@@ -42,7 +38,6 @@
         flex-direction: column;
         align-items: flex-start;
         height: auto;
-        width: 33.3333%;
         max-width: 380px;
 
         @include notebook {

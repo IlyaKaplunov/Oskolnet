@@ -124,7 +124,7 @@ const businessTariffsSlider = new Swiper(".business-tariffs__slider", {
   }
 });
 
-const mobSlider = document.querySelector('.news__inner');
+/* const mobSlider = document.querySelector('.news__inner');
 
 let myMobSwiper;
 
@@ -156,4 +156,4 @@ mobileSlider()
 
 window.addEventListener('resize', () => {
 	mobileSlider();
-});
+}); */

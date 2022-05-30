@@ -9,26 +9,12 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/popups */ "./src/js/components/popups.js");
-/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_popups__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 // Определение операционной системы на мобильных
 
-/* import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck()) */
-
-
-
-
- // Определение ширины экрана
+console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)()); // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
 // if (isDesktop()) {
 //   console.log('...')
@@ -122,6 +108,32 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./src/js/components.js":
+/*!******************************!*\
+  !*** ./src/js/components.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/popups */ "./src/js/components/popups.js");
+/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_popups__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
 
 
 /***/ }),
@@ -423,37 +435,39 @@ var businessTariffsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]("
     }
   }
 });
-var mobSlider = document.querySelector('.news__inner');
-var myMobSwiper;
+/* const mobSlider = document.querySelector('.news__inner');
+
+let myMobSwiper;
 
 function mobileSlider() {
-  if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
-    myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
-      slidesPerView: 1.1,
+	if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
+		myMobSwiper = new Swiper(mobSlider, {
+			slidesPerView: 1.1,
       freeMode: true,
-      slideClass: 'news__item',
+			slideClass: 'news__item',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
         type: 'bullets'
       }
-    });
-    mobSlider.dataset.mobile = 'true';
-  }
+		});
 
-  if (window.innerWidth > 600) {
-    mobSlider.dataset.mobile = 'false';
+		mobSlider.dataset.mobile = 'true';
+	}
 
-    if (mobSlider.classList.contains('swiper-initialized')) {
-      myMobSwiper.destroy();
-    }
-  }
+	if (window.innerWidth > 600) {
+		mobSlider.dataset.mobile = 'false';
+		if (mobSlider.classList.contains('swiper-initialized')) {
+			myMobSwiper.destroy();
+		}
+	}
 }
 
-mobileSlider();
-window.addEventListener('resize', function () {
-  mobileSlider();
-});
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+}); */
 
 /***/ }),
 
@@ -477,6 +491,37 @@ tabs.forEach(function (tab, index) {
     tabs[index].classList.add('active');
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/functions/mobile-check.js":
+/*!******************************************!*\
+  !*** ./src/js/functions/mobile-check.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "mobileCheck": () => (/* binding */ mobileCheck)
+/* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+
+var mobileCheck = function mobileCheck() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(userAgent)) {
+    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
+    return "Android";
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
+    return "iOS";
+  }
+
+  return "unknown";
+};
 
 /***/ }),
 
@@ -13446,6 +13491,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_vendor */ "./src/js/_vendor.js");
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./src/js/components.js");
+
 
 
 
