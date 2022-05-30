@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header js-header">
     <div class="container">
         <div class="header__inner">
             <div class="header__left">
@@ -614,31 +614,35 @@
         <div class="center">
             <h2 class="news__title section-title">Новости</h2>
         </div>
-        <div class="news__inner">
-            <article class="news__item">
-                <div class="news__img">
-                    <img src="img/news/image-1.jpg" alt="">
+        <div class="news__wrapper">
+            <div class="news__inner swiper" data-mobile="false">
+                <div class="swiper-wrapper">
+                    <article class="news__item swiper-slide">
+                        <div class="news__img">
+                            <img src="img/news/image-1.jpg" alt="">
+                        </div>
+                        <time class="news__date" datetime="2022-05-03 12:00">05.03.2022</time>
+                        <div class="news__text">05 марта 2022 с 17:00 до 23:00 на сети интернет будут проводиться планово-профилактические работы.</div>
+                        <a href="#" class="news__link">Подробнее</a>
+                    </article>
+                    <article class="news__item swiper-slide">
+                        <div class="news__img">
+                            <img src="img/news/image-2.jpg" alt="">
+                        </div>
+                        <time class="news__date" datetime="2022-01-01 12:00">01.02.2022</time>
+                        <div class="news__text">С 1 февраля 2022 г меняется «Канал подарков». На кнопке 33 появится новый канал «Plan B».</div>
+                        <a href="#" class="news__link">Подробнее</a>
+                    </article>
+                    <article class="news__item swiper-slide">
+                        <div class="news__img">
+                            <img src="img/news/image-3.jpg" alt="">
+                        </div>
+                        <time class="news__date" datetime="2022-20-01 12:00">20.01.2022</time>
+                        <div class="news__text">«Осколнэт» предоставляет всем клиентам набор современных, надежных и необходимых телеком-услуг для дома.</div>
+                        <a href="#" class="news__link">Подробнее</a>
+                    </article>
                 </div>
-                <time class="news__date" datetime="2022-05-03 12:00">05.03.2022</time>
-                <div class="news__text">05 марта 2022 с 17:00 до 23:00 на сети интернет будут проводиться планово-профилактические работы.</div>
-                <a href="#" class="news__link">Подробнее</a>
-            </article>
-            <article class="news__item">
-                <div class="news__img">
-                    <img src="img/news/image-2.jpg" alt="">
-                </div>
-                <time class="news__date" datetime="2022-01-01 12:00">01.02.2022</time>
-                <div class="news__text">С 1 февраля 2022 г меняется «Канал подарков». На кнопке 33 появится новый канал «Plan B».</div>
-                <a href="#" class="news__link">Подробнее</a>
-            </article>
-            <article class="news__item">
-                <div class="news__img">
-                    <img src="img/news/image-3.jpg" alt="">
-                </div>
-                <time class="news__date" datetime="2022-20-01 12:00">20.01.2022</time>
-                <div class="news__text">«Осколнэт» предоставляет всем клиентам набор современных, надежных и необходимых телеком-услуг для дома.</div>
-                <a href="#" class="news__link">Подробнее</a>
-            </article>
+            </div>
         </div>
         <div class="center">
             <a href="news-page.html" class="news__btn btn btn--light">Все новости</a>
@@ -806,6 +810,103 @@
         </div>
     </div>
 </footer>
+    <div class="popup popup__one" id="popup1">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close close-popup">
+                <svg>
+                    <use xlink:href="img/sprite.svg#Close"></use>
+                </svg>
+            </a>
+            <form action="#" class="popup__form">
+                <h1 class="popup__title">Заявка на подключение</h1>
+                <label for="#" class="popup__field">
+                    <input type="tel" class="popup__input" placeholder="+7 (___) ___-__-__ *">
+                </label>
+                <label for="#" class="popup__field">
+                    <input type="text" class="popup__input" placeholder="Как Вас зовут? *">
+                </label>
+                <label for="#" class="popup__field">
+                    <input type="text" class="popup__input" placeholder="Адрес дома *">
+                </label>
+                <label for="#" class="popup__field">
+                    <input type="number" class="popup__input" placeholder="Удобное время для звонка">
+                </label>
+                <label class="custom-checkbox popup__checkbox">
+                    <input type="checkbox" class="custom-checkbox__input">
+                    <span class="custom-checkbox__text">Нажимая на кнопку, я даю согласие на обработку персональных данных</span>
+                </label>
+                <button class="popup__btn btn btn--light" type="submit">Жду звонка</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup__two" id="popup2">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close close-popup">
+                <svg>
+                    <use xlink:href="img/sprite.svg#Close"></use>
+                </svg>
+            </a>
+            <h1 class="popup__title">Тариф «Бизнес-1»</h1>
+            <div class="popup__inner">
+                <div class="popup__left">
+                    <h3 class="popup__speed">2 Мбит/с</h3>
+                    <ul class="popup__list">
+                        <li>Бесплатное подключение</li>
+                        <li>Статический IP-адрес</li>
+                    </ul>
+                    <h3 class="popup__caption">Необходимое оборудование</h3>
+                    <ul class="popup__list">
+                        <li>Wi-Fi роутер</li>
+                    </ul>
+                    <div class="popup__price">500 <span>₽/мес</span></div>
+                    <button class="popup__btn btn btn--light" type="button">Подключить</button>
+                </div>
+                <div class="popup__right">
+                    <p class="popup__text">Интернет и IP-телевидение у вас дома! Высокая и стабильная скорость доступа в Интернет, множество популярных каналов: кино, детям, ток-шоу, бизнес, спорт, новости и пр. Тарифное предложение доступно для подключения новых и перехода действующих клиентов. Подключение производится при наличии технической возможности.
+                    </p>
+                    <div class="popup__bonuses">
+                        <div class="popup__bonuses-item">
+                            <div class="popup__bonuses-icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#best-1"></use>
+                                </svg>
+                            </div>
+                            <div class="popup__caption">Бонус 1</div>
+                        </div>
+                        <div class="popup__bonuses-item">
+                            <div class="popup__bonuses-icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#best-2"></use>
+                                </svg>
+                            </div>
+                            <div class="popup__caption">Бонус 2</div>
+                        </div>
+                        <div class="popup__bonuses-item">
+                            <div class="popup__bonuses-icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#best-3"></use>
+                                </svg>
+                            </div>
+                            <div class="popup__caption">Бонус 3</div>
+                        </div>
+                        <div class="popup__bonuses-item">
+                            <div class="popup__bonuses-icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#best-4"></use>
+                                </svg>
+                            </div>
+                            <div class="popup__caption">Бонус 4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   </div>
 </body>
 </html>

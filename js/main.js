@@ -9,21 +9,21 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/popups */ "./src/js/components/popups.js");
-/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_popups__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/popups */ "./src/js/components/popups.js");
+/* harmony import */ var _components_popups__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_popups__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_4__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 // Определение операционной системы на мобильных
 
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+/* import { mobileCheck } from "./functions/mobile-check";
+console.log(mobileCheck()) */
 
 
 
@@ -402,6 +402,7 @@ var businessTariffsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]("
   slidesPerGroup: 1,
   spaceBetween: 13,
   loop: true,
+  freeMode: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -422,39 +423,37 @@ var businessTariffsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]("
     }
   }
 });
-/* const mobSlider = document.querySelector('.news__inner');
-
-let myMobSwiper;
+var mobSlider = document.querySelector('.news__inner');
+var myMobSwiper;
 
 function mobileSlider() {
-	if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
-		myMobSwiper = new Swiper(mobSlider, {
-			slidesPerView: 1.1,
+  if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
+    myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
+      slidesPerView: 1.1,
       freeMode: true,
-			slideClass: 'news__item',
+      slideClass: 'news__item',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
         type: 'bullets'
       }
-		});
+    });
+    mobSlider.dataset.mobile = 'true';
+  }
 
-		mobSlider.dataset.mobile = 'true';
-	}
+  if (window.innerWidth > 600) {
+    mobSlider.dataset.mobile = 'false';
 
-	if (window.innerWidth > 600) {
-		mobSlider.dataset.mobile = 'false';
-		if (mobSlider.classList.contains('swiper-initialized')) {
-			myMobSwiper.destroy();
-		}
-	}
+    if (mobSlider.classList.contains('swiper-initialized')) {
+      myMobSwiper.destroy();
+    }
+  }
 }
 
-mobileSlider()
-
-window.addEventListener('resize', () => {
-	mobileSlider();
-}); */
+mobileSlider();
+window.addEventListener('resize', function () {
+  mobileSlider();
+});
 
 /***/ }),
 
@@ -478,37 +477,6 @@ tabs.forEach(function (tab, index) {
     tabs[index].classList.add('active');
   });
 });
-
-/***/ }),
-
-/***/ "./src/js/functions/mobile-check.js":
-/*!******************************************!*\
-  !*** ./src/js/functions/mobile-check.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "mobileCheck": () => (/* binding */ mobileCheck)
-/* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
-
-var mobileCheck = function mobileCheck() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-  if (/android/i.test(userAgent)) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
-    return "Android";
-  }
-
-  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
-    return "iOS";
-  }
-
-  return "unknown";
-};
 
 /***/ }),
 
