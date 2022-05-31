@@ -76,7 +76,7 @@
                 width: 23px;
                 height: 28px;
                 background: url("../img/svg/map-form.svg") left no-repeat;
-                z-index: 2;
+                z-index: 1;
                 display: none;
 
                 @include mobile {
