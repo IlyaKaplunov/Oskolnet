@@ -205,6 +205,12 @@ body.lock {
 
 .section__top {
   text-align: center;
+  padding-top: 150px;
+}
+@media (max-width: 576px) {
+  .section__top {
+    padding-top: 105px;
+  }
 }
 
 .center {
@@ -248,6 +254,22 @@ body.lock {
 .header {
   background-color: #fff;
   padding: 25px 0 27px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header.fixed {
+  padding: 10px 0;
+  -webkit-box-shadow: 0px 64px 194px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 64px 194px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 576px) {
+  .header.fixed {
+    padding: 0;
+  }
 }
 @media (max-width: 1200px) {
   .header {
@@ -1220,6 +1242,7 @@ body.lock {
   background: -o-linear-gradient(313.51deg, #263057 25.34%, #1D1444 89.06%);
   background: linear-gradient(136.49deg, #263057 25.34%, #1D1444 89.06%);
   padding: 43px 0;
+  margin-top: 146px;
 }
 .home__slider {
   background-color: #fff;
@@ -1604,7 +1627,7 @@ body.lock {
   width: 23px;
   height: 28px;
   background: url("../img/svg/map-form.svg") left no-repeat;
-  z-index: 2;
+  z-index: 1;
   display: none;
 }
 @media (max-width: 576px) {
@@ -2410,6 +2433,9 @@ body.lock {
   height: 36px;
 }
 
+.map {
+  padding-top: 150px;
+}
 .map .section__top {
   position: absolute;
   top: 0;
@@ -2419,6 +2445,7 @@ body.lock {
   transform: translateX(-50%);
   z-index: 1;
   pointer-events: visible;
+  padding-top: 0;
 }
 .map__inner {
   position: relative;
