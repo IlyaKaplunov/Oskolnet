@@ -1,3 +1,24 @@
+const header = document.querySelector(".header");
+const target = document.querySelector(".home, .section__top");
+
+const headerHeight = header.clientHeight;
+const fixed = "fixed";
+
+
+const observer = new IntersectionObserver(([entry]) => {
+  if (entry.isIntersecting) {
+    header.classList.remove(fixed);
+  } else {
+    header.classList.add(fixed);
+  }
+});
+
+observer.observe(target);
+
+
+
+
+
 /* const header = document.querySelector('.header');
 const home = document.querySelector('.home');
 const headerHeight = header.offsetHeight;
@@ -46,15 +67,15 @@ document.onscroll = function () {
 	}
 } */
 
-window.onscroll = function() {scrollFunction()};
+/* window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 	let scrollPos = 200;
-	let header = document.getElementById('header');
+	let header = document.querySelector('.header');
 
 	if(document.body.scrollTop > scrollPos || document.documentElement.scrollTop > scrollPos) {
 		header.classList.add('fixed');
 	} else {
 		header.classList.remove('fixed');
 	}
-}
+} */

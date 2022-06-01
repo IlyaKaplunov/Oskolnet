@@ -102,11 +102,6 @@ body {
 
 .section__top {
 	text-align: center;
-	padding-top: 150px;
-
-	@include mobile {
-		padding-top: 105px;
-	}
 }
 
 .center {
