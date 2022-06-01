@@ -124,15 +124,14 @@ const businessTariffsSlider = new Swiper(".business-tariffs__slider", {
   }
 });
 
-/* const mobSlider = document.querySelector('.news__inner');
+const mobSlider = document.querySelector('.news__inner');
 
 let myMobSwiper;
 
 function mobileSlider() {
-	if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
+	if (window.innerWidth <= 750 && mobSlider.dataset.mobile == 'false') {
 		myMobSwiper = new Swiper(mobSlider, {
 			slidesPerView: 1.1,
-      freeMode: true,
 			slideClass: 'news__item',
       pagination: {
         el: '.swiper-pagination',
@@ -144,7 +143,7 @@ function mobileSlider() {
 		mobSlider.dataset.mobile = 'true';
 	}
 
-	if (window.innerWidth > 600) {
+	if (window.innerWidth > 750) {
 		mobSlider.dataset.mobile = 'false';
 		if (mobSlider.classList.contains('swiper-initialized')) {
 			myMobSwiper.destroy();
@@ -156,4 +155,4 @@ mobileSlider()
 
 window.addEventListener('resize', () => {
 	mobileSlider();
-}); */
+});

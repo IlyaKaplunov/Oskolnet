@@ -10,23 +10,14 @@
         margin-bottom: 40px;
     }
 
+
     &__inner {
         padding-bottom: 41px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 19px;
+
+        
 
         .swiper-wrapper {
             column-gap: 19px;
-        }
-
-        @include tablet {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include mobile {
-            grid-template-columns: repeat(1, 1fr);
-            padding-bottom: 49px;
         }
     }
 
@@ -39,6 +30,7 @@
         align-items: flex-start;
         height: auto;
         max-width: 380px;
+        width: 33.3333%;
 
         @include notebook {
             padding: 20px;
