@@ -10,14 +10,23 @@
         margin-bottom: 40px;
     }
 
+    &__wrapper {
+        margin: 0 -15px;
+    }
 
     &__inner {
-        padding-bottom: 41px;
+        padding: 0 15px 41px;
 
-        
+        @include mobile {
+            padding-bottom: 49px;
+        }
 
         .swiper-wrapper {
             column-gap: 19px;
+        }
+
+        .swiper-pagination {
+            bottom: 16px;
         }
     }
 
@@ -87,6 +96,10 @@
 
     &__btn {
         padding: 15px 76px;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
