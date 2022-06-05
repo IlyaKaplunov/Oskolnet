@@ -2696,6 +2696,9 @@ body.lock {
   gap: 37px 19px;
   padding-bottom: 76px;
 }
+.news-list__content .news__item {
+  width: 100%;
+}
 @media (max-width: 1024px) {
   .news-list__content {
     -ms-grid-columns: (1fr)[2];
@@ -2809,9 +2812,8 @@ body.lock {
   line-height: 140%;
   margin-top: 70px;
   padding-left: 55px;
-}
-.news-article__btn span {
-  background: url("../img/svg/arrow-prev.svg") left no-repeat;
+  background: #6984F0 url("../img/svg/arrow-back.svg") left 23px center no-repeat;
+  background-size: 18px 10px;
 }
 .news-article__img {
   margin-top: 30px;
