@@ -54,10 +54,8 @@
         line-height: 140%;
         margin-top: 70px;
         padding-left: 55px;
-
-        span {
-            background: url("../img/svg/arrow-prev.svg") left no-repeat;
-        }
+        background: #6984F0 url("../img/svg/arrow-back.svg") left 23px center no-repeat;
+        background-size: 18px 10px;
     }
 
     &__img {

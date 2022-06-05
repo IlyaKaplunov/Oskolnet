@@ -8,6 +8,10 @@
         gap: 37px 19px;
         padding-bottom: 76px;
 
+        .news__item {
+            width: 100%;
+        }
+
         @include notebook {
             grid-template-columns: repeat(2, 1fr);
         }
