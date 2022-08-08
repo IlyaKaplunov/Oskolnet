@@ -1,8 +1,6 @@
 import Swiper, { Navigation, Pagination, FreeMode} from "swiper"; 
 Swiper.use([Navigation, Pagination, FreeMode]); 
 
-
-
 const partnersSlider = new Swiper(".partners__slider", { 
   speed: 600,
   slidesPerView: 1, 
@@ -124,7 +122,7 @@ const businessTariffsSlider = new Swiper(".business-tariffs__slider", {
   }
 });
 
-const mobSlider = document.querySelector('.news__inner');
+const mobSlider = document.querySelector('.news__slider');
 
 let myMobSwiper;
 
@@ -132,7 +130,9 @@ function mobileSlider() {
 	if (window.innerWidth <= 750 && mobSlider.dataset.mobile == 'false') {
 		myMobSwiper = new Swiper(mobSlider, {
 			slidesPerView: 1.1,
+      spaceBetween: 30,
 			slideClass: 'news__item',
+      freeMode: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

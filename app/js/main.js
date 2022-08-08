@@ -535,14 +535,16 @@ var businessTariffsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]("
     }
   }
 });
-var mobSlider = document.querySelector('.news__inner');
+var mobSlider = document.querySelector('.news__slider');
 var myMobSwiper;
 
 function mobileSlider() {
   if (window.innerWidth <= 750 && mobSlider.dataset.mobile == 'false') {
     myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
       slidesPerView: 1.1,
+      spaceBetween: 30,
       slideClass: 'news__item',
+      freeMode: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

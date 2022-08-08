@@ -11,20 +11,28 @@
     }
 
     &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        @include tablet {
+            gap: 0;
+            display: flex;
+        }
+    }
+
+    &__box {
         margin: 0 -15px;
     }
 
-    &__inner {
+    &__slider {
         padding: 0 15px 41px;
 
         @include mobile {
             padding-bottom: 49px;
         }
 
-        .swiper-wrapper {
-            column-gap: 19px;
-        }
-
+        
         .swiper-pagination {
             bottom: 16px;
         }
@@ -38,11 +46,13 @@
         flex-direction: column;
         align-items: flex-start;
         height: auto;
-        max-width: 380px;
-        width: 33.3333%;
 
         @include notebook {
             padding: 20px;
+        }
+
+        @include tablet {
+            width: 380px;
         }
 
         @include mobile {
