@@ -5,12 +5,14 @@
                 <form action="#" class="test-forms__form">
                     <h2 class="test-forms__title">Трудно выбрать? Мы поможем!</h2>
                     <div class="test-forms__row">
-                        <label for="#" class="test-forms__field">
-                            <input type="tel" data-validate-field="myField" class="test-forms__input" placeholder="+7 (___) ___-__-__ *">
-                        </label>
-                        <label for="#" class="test-forms__field">
-                            <input type="tel" class="test-forms__input" placeholder="Как Вас зовут? *">
-                        </label>
+                        <div class="test-forms__fields">
+                            <label for="#" class="test-forms__field">
+                                <input type="tel" data-validate-field="myField" class="test-forms__input" placeholder="+7 (___) ___-__-__ *">
+                            </label>
+                            <label for="#" class="test-forms__field">
+                                <input type="tel" class="test-forms__input" placeholder="Как Вас зовут? *">
+                            </label>
+                        </div>
                         <button type="submit" class="test-forms__btn btn btn--light">Жду звонка</button>
                     </div>
                     <label class="custom-checkbox test-forms__checkbox">
@@ -24,12 +26,14 @@
                     <h2 class="test-forms__title">Проверить возможность подключения по вашему адресу</h2>
                     <div class="test-forms__row">
                         <img src="img/svg/map-1.svg" alt="" class="test-forms__icon">
-                        <label for="#" class="test-forms__field">
-                            <input type="text" class="test-forms__input test-forms__input--long" placeholder="Улица">
-                        </label>
-                        <label for="#" class="test-forms__field">
-                            <input type="number" class="test-forms__input test-forms__input--short" placeholder="Дом">
-                        </label>
+                        <div class="test-forms__fields">
+                            <label for="#" class="test-forms__field">
+                                <input type="text" class="test-forms__input test-forms__input--long" placeholder="Улица">
+                            </label>
+                            <label for="#" class="test-forms__field">
+                                <input type="number" class="test-forms__input test-forms__input--short" placeholder="Дом">
+                            </label>
+                        </div>
                         <button type="submit" class="test-forms__btn test-forms__btn--check btn btn--light">Проверить</button>
                     </div>
                 </form>

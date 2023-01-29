@@ -3,6 +3,10 @@
 
     &__title {
         margin-bottom: 85px;
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
     }
 
     &__inner {

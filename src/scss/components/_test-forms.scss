@@ -61,9 +61,24 @@
         }
     }
 
+    &__fields {
+        display: flex;
+        width: 100%;
+
+        @include notebook {
+            display: block;
+        }
+    }
+
     &__field {
+        display: block;
         width: 100%;
         margin-right: 22px;
+
+        @include notebook {
+            margin-right: 0;
+            margin-bottom: 22px;
+        }
 
         &--long {
             position: relative;
